@@ -5,6 +5,14 @@ let nivel = 99;
 let vida = 85;
 let ouro = 120;
 let xp = 3000;
+let  manaAtual = 150;
+let manaMaxima = 150;
+let experiencia = 350;
+let vidaMaxima = 100;
+let forca = 90;
+let defesa = 150;
+let agilidade = 55;
+let combatesVencidos = 0;
 
 // 2. Definição das constantes mágicas com const
 const NOME_ARMA = "Espada CSS";
@@ -29,7 +37,7 @@ let nivelAvancado = nivel >= 20;
 let podeEnfrentarGuardiao = vidaSuficiente && (ataqueForte || nivelAvancado)
 
 // 6. Geração da lore do personagem (narrativa)
-console.log("Na terra perdida dos campos de gamers abertos, nasce um novo guerreiro...");
+console.log("Na terra perdida dos campos de gamers , nasce um novo guerreiro...");
 console.log(`${nome}, o ${classe}`);
 console.log(`Portando sua ${NOME_ARMA} e vestindo a ${NOME_ARMADURA},`);
 console.log(`Com nível ${nivel}, possui um ataque total de ${ataqueTotal}, podendo destruir qualquer Cracker do seu caminho.`);
@@ -40,3 +48,25 @@ console.log(`Vida suficiente para enfrentar desafios feitos pelos DEVS lendário
 console.log(`Pode enfrentar o Guardião do Deep Seek? ${podeEnfrentarGuardiao}`);
 console.log("A saga está apenas começando...");
 
+
+// Estado atual da história (continue de onde parou no Nível 1)
+let localAtual = (`O grande guerreiro ${nome}, estava na terra perdida dos campos de gamers. Um lugar onde gamers perdiddos aprodecem em meio a códigos de jogos mal feitos,crackers,vírus e jogos de ps2 da feira. `);
+let missaoAtual = "Sua missão no nível um era derrotar o guardião  poderoso do Deep seek, e toma-lo tal poder para si mesmo, aprimorando suas abilidades e poderes de códigos";
+
+// Prólogo: 
+
+// Estado atual de Claudinei:
+console.log(`${nome} teve diversos desafios na terra dos gamers perdidos, lutou contra oponentes poderosos como o Copilot e Guardião do Deep Seek`);
+console.log(`Após essas lutas ${nome} adquiriu um poderoso codigo: Deep seek, onde ele pode auxiliar ${nome} em suas decisões e missões, além de restaurar seu estado atual, para que ele estejá preparado para oq estar por vir`);
+console.log(`Entretanto ${nome} não esperava o mal que estava se aproximando: Um antigo amigo cujo nome era FORTAN , Fortan foi a primeira linguagem de programação, possui um poder inestimavel, que nosso ${classe} vai ter que enfrentar`);
+
+// CAPÍTULO 1: Condicionais Simples na narrativa
+console.log("🌅 CAPÍTULO 1: A primeira Linguagem de programação");
+
+console.log(`Com a ameaça se aproximando da  `);
+
+if (nivel < 99) {
+    console.log("'");
+    console.log("Mas " + nomePersonagem + " decide prosseguir mesmo assim...");
+
+}
