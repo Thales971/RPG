@@ -72,3 +72,28 @@ if (nivel < 55) {
     console.log(`${nome} está preparado para enfrentar o antigo amigo FORTAN!, mas ele precisa de mais recursos para a batalha.`);
 }
 
+// CAPÍTULO 2: Condicionais Compostas
+console.log("🛡️ CAPÍTULO 2: Tempos Ruins");
+console.log(`Antes de enfrentar FORTAN, ${nome} precisa decidir como usar seus recursos.`);
+console.log(`${nome} decide ir até o local com os melhores equipamentos: Mercadinho Big bommmm.`);
+
+
+
+console.log(`${nome} chega ao Mercadinho Big bommmm e encontra várias opções de equipamentos.`);
+
+if (ouro >= 50) {
+    console.log("💰 O guerreiro usa ouro para adquirir uma poderosa poção: Red Bull, uma bebida que foi deixado pelo humano mais forte que ja pisou na terra dos gamers perdidos.");
+    vida += 20; // Aumenta vida
+    manaAtual += 30; // Aumenta mana
+    forca += 100; // Aumenta força
+    agilidade += 100; // Aumenta agilidade
+} else {
+    console.log("🛡️ Sem ouro, ele deve usar suas habilidades em codigos!");
+    defesa += 50; // Aumenta defesa
+}
+console.log(`${nome} está pronto para a batalha!, o guerreiro então parte para a localização do guardião FORTAN, o ${classe} sente a adrenalina subir, e o coração acelerar, ele sabe que essa batalha não será fácil.`);
+// Preparação para a batalha
+console.log(`${nome} corre para o campo de batalha, pronto para enfrentar FORTAN.`);
+
+
+
