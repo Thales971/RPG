@@ -95,5 +95,23 @@ console.log(`${nome} está pronto para a batalha!, o guerreiro então parte para
 // Preparação para a batalha
 console.log(`${nome} corre para o campo de batalha, pronto para enfrentar FORTAN.`);
 
+// CAPÍTULO 3: Condicionais Encadeadas
+console.log("⚔️ CAPÍTULO 3: Fortan");
+let poderInimigo = 100;
+let vidaAtual = vida;
+if (vidaAtual <= 20) {
+    console.log(` Com pouca vida! ${nome} deve usar um item de cura!`);
+    vida += 20; // Cura
+    poderInimigo -= forca * 2; // Ataque contundente
+} else if (manaAtual >= 50) {
+    console.log(` ${nome} usa um poderoso feitiço de java!, que quebra as defesas de FORTAN!`);
+    console.log(` A barreira de FORTAN foi reduzida!`);
+    manaAtual -= 50; // Usa mana
+    poderInimigo -= forca * 3; // Ataque mágico
+} else {
+    console.log(` ${nome} ataca com sua ${arma}!`);
+    poderInimigo -= forca; // Ataque normal
+}
+
 
 
