@@ -113,5 +113,18 @@ if (vidaAtual <= 20) {
     poderInimigo -= forca; // Ataque normal
 }
 
+// Resultado da batalha
+if (poderInimigo <= 0) {
+    console.log(`🏆 Vitória! ${nome} derrotou FORTAN!, com as defesas de Fortan reduzidas, ${nome} da um ataque final e derrota Fortan`);
+    experiencia += 1000; // Ganha experiência
+    combatesVencidos++;
+} else {
+    console.log(`💔 Derrota... ${nome} não conseguiu vencer FORTAN.`);
+}
+
+// Epílogo
+console.log(`A aventura de ${nome} está longe de acabar. Novas batalhas e desafios o aguardam!`);
+
+
 
 
