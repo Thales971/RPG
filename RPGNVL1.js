@@ -49,24 +49,26 @@ console.log(`Pode enfrentar o Guardião do Deep Seek? ${podeEnfrentarGuardiao}`)
 console.log("A saga está apenas começando...");
 
 
-// Estado atual da história (continue de onde parou no Nível 1)
-let localAtual = (`O grande guerreiro ${nome}, estava na terra perdida dos campos de gamers. Um lugar onde gamers perdiddos aprodecem em meio a códigos de jogos mal feitos,crackers,vírus e jogos de ps2 da feira. `);
-let missaoAtual = "Sua missão no nível um era derrotar o guardião  poderoso do Deep seek, e toma-lo tal poder para si mesmo, aprimorando suas abilidades e poderes de códigos";
+// Estado atual da história
+let localAtual = (`O grande guerreiro ${nome}, estava na terra perdida dos campos de gamers. Um lugar onde gamers perdidos apodrecem em meio a códigos de jogos mal feitos, crackers, vírus e jogos de ps2 da feira.`);
+let missaoAtual = "Sua missão no nível um era derrotar o guardião poderoso do Deep Seek, e toma-lo tal poder para si mesmo, aprimorando suas habilidades e poderes.";
 
-// Prólogo: 
-
-// Estado atual de Claudinei:
-console.log(`${nome} teve diversos desafios na terra dos gamers perdidos, lutou contra oponentes poderosos como o Copilot e Guardião do Deep Seek`);
-console.log(`Após essas lutas ${nome} adquiriu um poderoso codigo: Deep seek, onde ele pode auxiliar ${nome} em suas decisões e missões, além de restaurar seu estado atual, para que ele estejá preparado para oq estar por vir`);
-console.log(`Entretanto ${nome} não esperava o mal que estava se aproximando: Um antigo amigo cujo nome era FORTAN , Fortan foi a primeira linguagem de programação, possui um poder inestimavel, que nosso ${classe} vai ter que enfrentar`);
+// Prólogo
+console.log(`${nome} teve diversos desafios na terra dos gamers perdidos, lutou contra oponentes poderosos como o Copilot e Guardião do Deep Seek.`);
+console.log(`Após essas lutas, ${nome} adquiriu um poderoso código: Deep Seek, onde ele pode auxiliar ${nome} em suas decisões e missões, além de restaurar seu estado atual, para que ele esteja preparado para o que estar por vir.`);
+console.log(`Entretanto, ${nome} não esperava o mal que estava se aproximando: Um antigo amigo cujo nome era FORTAN, Fortan foi a primeira linguagem de programação, possui um poder inestimável, que nosso ${classe} vai ter que enfrentar.`);
 
 // CAPÍTULO 1: Condicionais Simples na narrativa
-console.log("🌅 CAPÍTULO 1: A primeira Linguagem de programação");
+console.log("🌅 CAPÍTULO 1: A primeira Linguagem de Programação");
+console.log(`Com a ameaça se aproximando da terra dos gamers perdidos, ${nome} está em dúvida sobre qual caminho ele deverá seguir...`);
+console.log(`${nome} precisa avaliar seu nível, vida e recursos antes de enfrentar FORTAN.`);
 
-console.log(`Com a ameaça se aproximando da  `);
-
-if (nivel < 99) {
-    console.log("'");
-    console.log("Mas " + nomePersonagem + " decide prosseguir mesmo assim...");
-
+// Condições Simples
+if (nivel < 55) {
+    console.log(` O level do ${nome} é baixo, ele deve treinar e derrotar mais inimigos antes de enfrentar FORTAN.`);
+} else if (vida < 90) {
+    console.log(` Vida baixa! ${nome} deve procurar um glamBurguer para recuperar a vida!`);	
+} else {
+    console.log(`${nome} está preparado para enfrentar o antigo amigo FORTAN!, mas ele precisa de mais recursos para a batalha.`);
 }
+
