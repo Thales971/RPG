@@ -125,6 +125,57 @@ if (poderInimigo <= 0) {
 // Epílogo
 console.log(`A aventura de ${nome} está longe de acabar. Novas batalhas e desafios o aguardam na ${Local}!`);
 
+//CONTINUAÇÃO DA SAGA - NÍVEL 3
+
+ classe = "CODHUNTER";
+ nivel = 1000; // Evoluiu após as batalhas anteriores!
+ vidaAtual = 120; // Vida atual após as batalhas
+ vidaMaxima = 200; // Vida máxima após as batalhas
+ experiencia = 1200; // Experiência adquirida após derrotar FORTAN
+ ouro = 300; // Ouro coletado após derrotar FORTAN
+
+
+// Inventário do CODHUNTER - primeira coleção  
+let inventario = ["Red Bull", "Espada Css", "Capa de javaScript", ];
+let aliados = ["Guts", "Ichigo", "Vacivous","Mohg","Ziegfried","LabubuDiddy"];
+let inimigosEncontrados = ["Tung Tung Sahur", "Boobie goods", "Morango do amor","Receita Federal"];
+let salasCastelo = ["TikTok", "Twitter", "Reddit", "Discord"];
+let tesourosColetados = [];
+
+console.log(`O ${nome} agora é um ${classe}, com nível ${nivel} e vida máxima de ${vidaMaxima}.`);
+console.log(`Após as vitórias dos capítulos anteriores, nosso ${classe} chegou ao castelo da internet Lobotomizada`);
+console.log("Inventário inicial: " + inventario.length + " itens irrados");
+
+//  CAPÍTULO 1: Internet Lobotomizada
+console.log("🌐 CAPÍTULO 1: A Internet Lobotomizada");
+console.log(`Após derrotar FORTAn, ${nome} se depara com um novo desafio: a Internet Lobotomizada, um lugar onde os códigos são confusos e os desafios são infinitos.`);
+console.log(`${nome} não sabe a origem desse lugar criado por FORTAN, antes de sua derrota, mas ele sabe que precisa desvendar os mistérios e derrotar os novos inimigos aliados de FORTAN.`);
+console.log(`${nome} sente a brisa suave do javaScript soar pelo seu rosto,isto lhe cria a coragem necessária para entrar aos aposentos de FORTAN.`);
+console.log(`${nome} entra no castelo e encontra um baú misterioso.`);
+
+
+
+
+//  Declaração e inicialização
+let powerUpsEncontrados = ["Monster", "Chá gelado", "Dolly"];
+let armadilhasEncontradas = []; // Array vazio - será preenchido após eventos futuros
+
+// Acesso e modificação de elementos
+console.log(" Primeiro power up encontrado: " + powerUpsEncontrados[0]);
+console.log(" Total de power ups: " + powerUpsEncontrados.length);
+
+// Modificando elemento específico
+inventario[0] = "Power up de Vida Suprema"; // Upgrade da power up!
+console.log("🌀🌠 " + nomePersonagem + " aprimorou uma power up!");
+
+// Métodos de array fundamentais
+inventario.push("lancheira do minecraft"); // Adicionando no final do array
+console.log(" Novo item adicionado! Inventário: " + inventario); // Exibindo inventário atualizado
+
+let itemRemovido = inventario.pop(); // Removendo do final do array
+console.log(" Item removido: " + itemRemovido);
+console.log(" Inventário atual: " + inventario);
+
 
 
 
