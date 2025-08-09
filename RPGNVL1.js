@@ -369,4 +369,168 @@ for (let i = 0; i < danoRecebido.length; i++) {
 console.log(" Dano total causado: " + danoTotal);
 console.log(" Tesouros coletados: " + inventario.length + " itens léndarios!");
 
+// Desafios:
 
+// DESAFIO 1: Sistema de Inventário Inteligente (por tipo e raridade)
+function organizarInventario(inventario) {
+  let porTipo = {
+    Poção: [],
+    Arma: [],
+    Armadura: [],
+    "Power Up": [],
+    Outro: [],
+  };
+  let porRaridade = {
+    Raro: [],
+    Comum: [],
+  };
+
+  for (let i = 0; i < inventario.length; i++) {
+    let item = inventario[i];
+
+    // Classificação por tipo
+    if (
+      item.toLowerCase().includes("poção") ||
+      item.toLowerCase().includes("red bull")
+    ) {
+      porTipo["Poção"].push(item);
+    } else if (item.toLowerCase().includes("espada")) {
+      porTipo["Arma"].push(item);
+    } else if (item.toLowerCase().includes("capa")) {
+      porTipo["Armadura"].push(item);
+    } else if (item.toLowerCase().includes("power up")) {
+      porTipo["Power Up"].push(item);
+    } else {
+      porTipo["Outro"].push(item);
+    }
+
+    // Classificação por raridade
+    if (
+      item.toLowerCase().includes("suprema") ||
+      item.toLowerCase().includes("lendária") ||
+      item.toLowerCase().includes("flamejante")
+    ) {
+      porRaridade["Raro"].push(item);
+    } else {
+      porRaridade["Comum"].push(item);
+    }
+  }
+
+  console.log(" Inventário por tipo:", porTipo);
+  console.log(" Inventário por raridade:", porRaridade);
+}
+organizarInventario(inventario);
+
+// DESAFIO 2: Relatório de Batalha
+function relatorioBatalha(danos, inventario, aliados) {
+  let soma = 0;
+  let maior = 0;
+  let maisUsado = "";
+  let usoItens = {};
+  for (let i = 0; i < danos.length; i++) {
+    soma += danos[i];
+    if (danos[i] > maior) maior = danos[i];
+  }
+  let media = danos.length > 0 ? (soma / danos.length).toFixed(2) : 0;
+
+  // Item mais usado (simulação: conta repetições no inventário)
+  for (let i = 0; i < inventario.length; i++) {
+    let item = inventario[i];
+    usoItens[item] = (usoItens[item] || 0) + 1;
+    if (!maisUsado || usoItens[item] > usoItens[maisUsado]) {
+      maisUsado = item;
+    }
+  }
+
+  // MVP (simulação: aliado com nome mais longo)
+  let mvp = aliados.reduce((a, b) => (a.length > b.length ? a : b), "");
+
+  console.log("📊 RELATÓRIO DE BATALHA:");
+  console.log("Dano médio:", media);
+  console.log("Maior dano em um round:", maior);
+  console.log("Item mais usado:", maisUsado || "Nenhum");
+  console.log("Ally MVP:", mvp);
+}
+relatorioBatalha(danoRecebido, inventario, aliados);
+
+// DESAFIO 3: Exploração Aleatória (salas e inimigos)
+function explorarAleatorio() {
+  let tiposSalas = [
+    "Sala dos Memes",
+    "Sala dos Bugs",
+    "Sala dos Bosses",
+    "Sala dos Tesouros",
+  ];
+  let inimigos = [
+    "Bug do Null",
+    "Meme Vivo",
+    "Boss do Lag",
+    "Vírus do Discord",
+  ];
+  let numSalas = Math.floor(Math.random() * 4) + 2; // Entre 2 e 5 salas
+
+  for (let i = 0; i < numSalas; i++) {
+    let sala = tiposSalas[Math.floor(Math.random() * tiposSalas.length)];
+    let inimigo = inimigos[Math.floor(Math.random() * inimigos.length)];
+    console.log(`🌀 Sala aleatória ${i + 1}: ${sala} | Inimigo: ${inimigo}`);
+  }
+}
+explorarAleatorio();
+
+// Listando tesouros coletados com for...of
+console.log("Tesouros épicos encontrados na jornada:");
+for (const tesouro of tesourosColetados) {
+  console.log("• " + tesouro);
+}
+
+// Estatísticas finais da jornada
+console.log("📈 Estatísticas Finais da Aventura:");
+console.log("• Nível alcançado: " + nivel);
+console.log("• Experiência total: " + experiencia);
+console.log("• Vida restante: " + vidaAtual + "/" + vidaMaxima);
+console.log("• Ouro acumulado: " + ouro);
+console.log("• Itens no inventário: " + inventario.length);
+console.log("• Aliados conquistados: " + aliados.length);
+console.log("• Tesouros épicos: " + tesourosColetados.length);
+console.log("");
+
+console.log(
+  " O castelo da Internet Lobotomizada agora estava livre das ameaças digitais criadas com dopamina infinita."
+);
+console.log(
+  "Claudinei do Pneu, com seus Devs lendários, celebrou a vitória com um grande festival de memes."
+);
+console.log(
+  "Os bugs e vírus foram banidos para sempre, e a paz reinou nos servidores da Terra Perdida dos Campos de Gamers."
+);
+console.log(
+  "Com o poder do Deep Seek, Claudinei restaurou todos os códigos corrompidos e reviveu jogos esquecidos."
+);
+console.log(
+  "Os devs lendários ergueram uma estátua em sua homenagem, feita de linhas de código e sonhos de programadores."
+);
+console.log(
+  "O ouro conquistado foi usado para criar um novo repositório, aberto para todos que desejassem aprender."
+);
+console.log(
+  "Claudinei compartilhou suas experiências, ensinando arrays, loops e funções para a próxima geração de guerreiros."
+);
+console.log(
+  "A lenda do Guerreiro das terras da Steam ecoou por toda a internet, inspirando outros a enfrentarem seus próprios bugs."
+);
+console.log(
+  "Mesmo após tantas conquistas, Claudinei sabia que novas aventuras digitais sempre surgiriam."
+);
+console.log(
+  "E assim, com coragem e criatividade, ele seguiu explorando os infinitos caminhos do universo dos códigos."
+);
+
+// EPÍLOGO
+console.log("");
+console.log(
+  " EPÍLOGO: Claudinei do Pneu tornou-se o primeiro CODHUNTER DOS ALGORITMOS."
+);
+console.log(
+  "Seu nome ficou gravado para sempre nos logs da história, como símbolo de superação, amizade e paixão pela programação."
+);
+//fim
