@@ -267,4 +267,106 @@ console.log(
   " Exploração das salas completas XP: " + experiencia + " | Vida: " + vidaAtual
 );
 
+//  CAPÍTULO 3: O grande reencontro
+
+console.log("🤝 CAPÍTULO 3: Reunindo os Devs lendários");
+
+// Recrutando Devs lendários com for tradicional
+console.log(nome + " convoca seus aliados para a última batalha:");
+
+for (let i = 0; i < aliados.length; i++) {
+  let aliado = aliados[i];
+  console.log(
+    " Devs lendários " + (i + 1) + ": " + aliado + " se junta para a missão!"
+  );
+
+  // Cada posição no array determina uma habilidade especial única
+  if (i === 0) {
+    // Primeiro aliado: Guerreiro
+    console.log(
+      " Como guerreiro, " + aliado + " multiplica a força da equipe!"
+    );
+    forca *= 2;
+  } else if (i === 1) {
+    // Segundo aliado: Assassino
+    console.log(
+      " Como assassino, " + aliado + " aumenta a agilidade da equipe!"
+    );
+    agilidade += 20;
+  } else {
+    // Demais aliados: suportes
+    console.log(
+      " Como suporte, " +
+        aliado +
+        " aprimora táticas de combate da equipe para enfrentar todos os desafios!"
+    );
+    experiencia += 40;
+    defesaTotal += 30;
+    vidaMaxima += 10;
+  }
+}
+
+console.log(
+  "Devs lendários reunidos! Ouro: " + ouro + " | Vida máxima: " + vidaMaxima
+);
+
+//  CAPÍTULO 4: A BATALHA FINAL da internet lobotomizada
+console.log(" CAPÍTULO 4: Os inimigos da internet lobotomizada");
+
+// Sistema de batalha usando arrays e for tradicional
+let inimigosBatalha = [
+  "Tralalero tralala",
+  "Senhor dos boobie goods",
+  "morango do amor mutante",
+];
+let danoRecebido = [];
+
+console.log(
+  " " +
+    nome +
+    " batalha contra " +
+    inimigosBatalha.length +
+    " inimigos sombrios!"
+);
+
+// Batalha usando for tradicional para controle preciso do dano
+for (let i = 0; i < inimigosBatalha.length; i++) {
+  let inimigo = inimigosBatalha[i];
+  let dano = Math.floor(Math.random() * 50) + 10; // Dano entre 10 e 59
+
+  console.log(" Round " + (i + 1) + "  Enfrenta: " + inimigo);
+  console.log(" " + aliados + " causam " + dano + " de dano!");
+
+  danoRecebido.push(dano); // Armazena dano para cálculos posteriores das batalhas
+
+  // Lógica especial para cada rodada baseada nos índices
+  if (i === 0) {
+    console.log(" Vitória! Fragmento de Meme Supremo concedem bônus!");
+    inventario.push("Fragmento de Meme Supremo");
+  } else if (i === 1) {
+    console.log(
+      " Segundo round! Os Brainrots absorvem a agilidade, mas " +
+        nome +
+        " persiste!"
+    );
+    agilidade -= 10;
+  } else {
+    console.log(
+      " Batalha final! Os morangos do amor mutante recuam! Vitória alcançada!"
+    );
+    experiencia += 1000;
+    inventario.push("Morango do amor");
+  }
+}
+
+// Calculando status da batalha usando for normal
+let danoTotal = 1000;
+for (let i = 0; i < danoRecebido.length; i++) {
+  danoTotal += danoRecebido[i];
+  console.log(" Round " + (i + 1) + "  Dano: " + danoRecebido[i]);
+}
+
+console.log(" Dano total causado: " + danoTotal);
+console.log(" Tesouros coletados: " + inventario.length + " itens léndarios!");
+
 
