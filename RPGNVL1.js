@@ -218,7 +218,6 @@ console.log(`${nome} entra no castelo e encontra um baú misterioso.`);
 
 //  Declaração e inicialização
 let powerUpsEncontrados = ["Monster", "Chá gelado", "Dolly"];
-let armadilhasEncontradas = []; // Array vazio - será preenchido após eventos futuros
 
 // Acesso e modificação de elementos
 console.log(" Primeiro power up encontrado: " + powerUpsEncontrados[0]);
@@ -360,7 +359,7 @@ for (let i = 0; i < inimigosBatalha.length; i++) {
 }
 
 // Calculando status da batalha usando for normal
-let danoTotal = 1000;
+let danoTotal = 0;
 for (let i = 0; i < danoRecebido.length; i++) {
   danoTotal += danoRecebido[i];
   console.log(" Round " + (i + 1) + "  Dano: " + danoRecebido[i]);
